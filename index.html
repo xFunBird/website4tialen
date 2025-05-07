@@ -53,86 +53,106 @@
   <div class="heart">❤</div>
   <p>Liebe Madalen,</p>
   <p>ich wollte dir einfach mal zeigen, wie sehr du mein Herz berührst. Du bist mein Zuhause, mein Friede. Ich liebe dein Lächeln, deine Seele und alles, was du bist.</p>
-  <p>Tialen4Life – f&uuml;r immer, nicht nur als Motto, sondern als Versprechen.</p>
+  <p>Das soll ein Ort sein für uns, für Tialen. Ein Ort an den du immer kommen kannst. Ein Ort an dem du dich wohlfühlst ❤️.</p>
 
-  <div class="button-container">
-    <p>Willst du f&uuml;r immer meine sein?</p>
-    <button onclick="alert('Dann lass uns gemeinsam f&uuml;r immer bauen ❤️')">Ja</button>
-    <button onclick="alert('Es gibt kein Nein 😘')">Ja 🥰</button>
   <div class="button-container">
     <button onclick="zeigeText()">Gedicht der Woche❤️</button>
 
     <script>
-        function zeigeText() {
-          var text = `
-            <style>
-              body {
-                margin: 0;
-                padding: 0;
-                background: linear-gradient(to bottom right, #fff0f5, #e6f0ff);
-                font-family: 'Georgia', serif;
-                color: #6b0f1a;
-                text-align: center;
-              }
-      
-              .text-wrapper {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-                padding: 30px;
-                line-height: 1.8;
-              }
-      
-              p {
-                max-width: 600px;
-                font-size: 1.3em;
-                background: rgba(255, 255, 255, 0.85);
-                padding: 20px;
-                border-radius: 15px;
-                margin-bottom: 20px;
-                box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-              }
-      
-              .hearts {
-                font-size: 2.5em;
-                margin-bottom: 30px;
-                animation: pulse 2s infinite;
-              }
-      
-              @keyframes pulse {
-                0%, 100% { transform: scale(1); }
-                50% { transform: scale(1.15); }
-              }
-            </style>
-      
-            <div class="text-wrapper">
-              <h1>Gewonnen, für immer</h1>
-              <div class="hearts">❤️✨💖</div>
-              <p>Du bringst Ruhe in mein ganzes Chaos,<br>
-              bei dir fühl ich mich nie fehl am Platz, lass mich nie los.<br>
-              Dein Blick sagt oft mehr als tausend Worte,<br>
-              du nimmst mein Herz mit an all deine Orte.</p>
-      
-              <p>Mit dir vergeht die Zeit wie im Flug,<br>
-              und jeder Moment mit dir tut einfach gut.<br>
-              Dein Lachen steckt an, macht alles leicht,<br>
-              du bist die, die mein Herz erreicht.</p>
-      
-              <p>Madalen – ja, du hast oft gewonnen,<br>
-              bei Minigolf, bei Uno – alles genommen.<br>
-              Aber ganz ehrlich, und das ist kein Scherz:<br>
-              Am Ende hast du auch mein Herz.</p>
-      
-              <p>Was kommt, weiß keiner, doch für mich steht fest:<br>
-              Du an meiner Seite, davon will ich nicht weg.</p>
-              <div class="hearts">💘🌹💞</div>
-            </div>
-          `;
-          document.body.innerHTML = text;
-        }
-      </script>
+      function zeigeText() {
+        var text = `
+          <style>
+            body {
+              margin: 0;
+              padding: 0;
+              background: linear-gradient(to bottom right, #fff0f5, #e6f0ff);
+              font-family: 'Georgia', serif;
+              color: #6b0f1a;
+              text-align: center;
+            }
+    
+            .text-wrapper {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+              padding: 30px;
+              line-height: 1.8;
+            }
+    
+            h1 {
+              font-size: 2.5em;
+              color: #d63384;
+              margin-bottom: 30px;
+            }
+    
+            p {
+              max-width: 600px;
+              font-size: 1.3em;
+              background: rgba(255, 255, 255, 0.85);
+              padding: 20px;
+              border-radius: 15px;
+              margin-bottom: 20px;
+              box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            }
+    
+            .hearts {
+              font-size: 2.5em;
+              margin-bottom: 30px;
+              animation: pulse 2s infinite;
+            }
+    
+            @keyframes pulse {
+              0%, 100% { transform: scale(1); }
+              50% { transform: scale(1.15); }
+            }
+    
+            .zurueck-button {
+              margin-top: 30px;
+              padding: 12px 24px;
+              font-size: 1rem;
+              background-color: #d63384;
+              color: white;
+              border: none;
+              border-radius: 25px;
+              cursor: pointer;
+              transition: background 0.3s ease;
+            }
+    
+            .zurueck-button:hover {
+              background-color: #ad1d65;
+            }
+          </style>
+    
+          <div class="text-wrapper">
+            <h1>Gewonnen, für immer</h1>
+            <div class="hearts">❤️✨💖</div>
+            <p>Du bringst Ruhe in mein ganzes Chaos,<br>
+            bei dir fühl ich mich nie fehl am Platz, lass mich nie los.<br>
+            Dein Blick sagt oft mehr als tausend Worte,<br>
+            du nimmst mein Herz mit an all deine Orte.</p>
+    
+            <p>Mit dir vergeht die Zeit wie im Flug,<br>
+            und jeder Moment mit dir tut einfach gut.<br>
+            Dein Lachen steckt an, macht alles leicht,<br>
+            du bist die, die mein Herz erreicht.</p>
+    
+            <p>Madalen – ja, du hast oft gewonnen,<br>
+            bei Minigolf, bei Uno – alles genommen.<br>
+            Aber ganz ehrlich, und das ist kein Scherz:<br>
+            Am Ende hast du auch mein Herz.</p>
+    
+            <p>Was kommt, weiß keiner, doch für mich steht fest:<br>
+            Du an meiner Seite, davon will ich nicht weg.</p>
+            <div class="hearts">💘🌹💞</div>
+            <button class="zurueck-button" onclick="location.reload()">&#8592</button>
+          </div>
+        `;
+        document.body.innerHTML = text;
+      }
+    </script>
+    
       
     </script>
 </script>

@@ -161,15 +161,64 @@
 
     <script>
       function archiv() {
-      <div class="text-wrapper">
-      <h1>Gedichte Archiv</h1>
-      <div class="hearts">❤️✨💖</div>
-      <button class="zurueck-button" onclick="location.reload()">&#8592</button>
-      </div>
-        
+        const text = `
+          <style>
+            body {
+              margin: 0;
+              padding: 0;
+              background: linear-gradient(to bottom right, #fff0f5, #e6f0ff);
+              font-family: 'Georgia', serif;
+              color: #6b0f1a;
+              text-align: center;
+           }
+            .text-wrapper {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+              padding: 30px;
+            }
+            h1 {
+              font-size: 2.5em;
+              color: #d63384;
+              margin-bottom: 30px;
+            }
+            .hearts {
+              font-size: 2.5em;
+              margin-bottom: 30px;
+              animation: pulse 2s infinite;
+            }
+            @keyframes pulse {
+              0%, 100% { transform: scale(1); }
+              50% { transform: scale(1.15); }
+            }
+            .zurueck-button {
+              margin-top: 30px;
+              padding: 12px 24px;
+              font-size: 1rem;
+              background-color: #d63384;
+              color: white;
+              border: none;
+              border-radius: 25px;
+              cursor: pointer;
+              transition: background 0.3s ease;
+            }
+            .zurueck-button:hover {
+              background-color: #ad1d65;
+              }
+          </style>
+
+          <div class="text-wrapper">
+            <h1>Gedichte Archiv</h1>
+            <div class="hearts">❤️✨💖</div>
+            <button class="zurueck-button" onclick="location.reload()">&#8592;</button>
+          </div>
+        `;
         document.body.innerHTML = text;
       }
     </script>
+
 
     </script>
 </script>

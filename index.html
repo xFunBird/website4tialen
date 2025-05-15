@@ -159,6 +159,82 @@
       }
     </script>
 
+<script>
+  function poem_1() {
+    fetch('NurMitdir.txt')
+      .then(response => response.text())
+      .then(gedicht => {
+        const html = `
+          <style>
+            body {
+              margin: 0;
+              padding: 0;
+              background: linear-gradient(to bottom right, #fff0f5, #e6f0ff);
+              font-family: 'Georgia', serif;
+              color: #6b0f1a;
+              text-align: center;
+            }
+            .text-wrapper {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+              padding: 30px;
+              line-height: 1.8;
+            }
+            h1 {
+              font-size: 2.5em;
+              color: #d63384;
+              margin-bottom: 30px;
+            }
+            pre {
+              max-width: 700px;
+              font-size: 1.3em;
+              background: rgba(255, 255, 255, 0.85);
+              padding: 20px;
+              border-radius: 15px;
+              white-space: pre-wrap;
+              box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            }
+            .hearts {
+              font-size: 2.5em;
+              margin-bottom: 30px;
+              animation: pulse 2s infinite;
+            }
+            @keyframes pulse {
+              0%, 100% { transform: scale(1); }
+              50% { transform: scale(1.15); }
+            }
+            .zurueck-button {
+              margin-top: 30px;
+              padding: 12px 24px;
+              font-size: 1rem;
+              background-color: #d63384;
+              color: white;
+              border: none;
+              border-radius: 25px;
+              cursor: pointer;
+              transition: background 0.3s ease;
+            }
+            .zurueck-button:hover {
+              background-color: #ad1d65;
+            }
+          </style>
+
+          <div class="text-wrapper">
+            <h1>Nur mit dir</h1>
+            <div class="hearts">❤️✨💖</div>
+            <pre>${gedicht}</pre>
+            <div class="hearts">💘🌹💞</div>
+            <button class="zurueck-button" onclick="archiv()">&#8592;</button>
+          </div>
+        `;
+        document.body.innerHTML = html;
+      });
+  }
+</script>
+
     <script>
       function archiv() {
         const text = `
@@ -212,8 +288,10 @@
           <div class="text-wrapper">
             <h1>Gedichte Archiv</h1>
             <div class="hearts">❤️✨💖</div>
-            <button class="zurueck-button" onclick="location.reload()">&#8592;</button>
+            <div class="button-container">
+              <button onclick="poem_1()">Nur mit dir❤️</button>
           </div>
+            <button class="zurueck-button" onclick="location.reload()">&#8592;</button>
         `;
         document.body.innerHTML = text;
       }
